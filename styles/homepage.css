@@ -1,0 +1,322 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+    color: #000;
+    background: #fff;
+      
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #fff;
+    height: 50px;
+    margin: 0;
+    padding: 0 ;
+
+}
+
+/* Navbar Section */
+
+.navbar{
+    background-color: #fff !important;
+    box-shadow: none;
+    border-bottom: none;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.navbar-logo{
+    max-height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+  
+}
+
+.navbar-toggler {
+    margin-left: auto;
+
+}
+
+/* Welcome section */
+
+.welcome-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.welcome-section h1 {
+    font-weight: 700;
+    color: #000;
+}
+
+.welcome-section .btn-dark {
+    transition: all 0.3s ease;
+}
+
+.welcome-section.btn-dark:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+
+
+/* Slideshow */
+
+/* Stile per il contenitore del carosello */
+#carouselExampleIndicators {
+    max-width: 60%; /* Larghezza massima del carosello */
+    margin: 0 auto; /* Centrare il carosello orizzontalmente */
+    position: relative;
+}
+
+/* Stile per le immagini del carosello */
+#carouselExampleIndicators .carousel-inner img {
+    width: 400px; /* Adattare l'immagine al contenitore del carosello */
+    height: 400px;; /* Mantenere il rapporto d'aspetto originale */ 
+    object-fit: cover; /* Ritagliare l'immagine per riempire lo spazio disponibile */
+
+}
+
+/* Pulsanti di controllo */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ridurre la larghezza dei pulsanti */
+}
+
+/* Indicatori */
+.carousel-indicators button {
+    background-color: #333; /* Colore scuro per i bottoni */
+}
+.carousel-indicators .active {
+    background-color: #717171; /* Colore per l'indicatore attivo */
+}
+
+
+/* Fine Slideshow */
+
+
+/* BreadCrumb Section */
+.breadcrumb {  
+    list-style: none;  
+    padding: 0;  
+    display: flex;  
+}  
+.breadcrumb li {  
+    margin-right: 10px; 
+    display: inline;
+}  
+.breadcrumb li + li:before {  
+    content: "/";  
+    margin-right: 10px;  
+} 
+ /* non funziona */
+.breadcrumb.li {
+    color: white;
+    text-decoration: none;
+}
+.breadcrumb.li.active {
+    color: green;
+    text-decoration: none;
+}
+
+
+/* cards section */
+.card-container {
+    display: flex; /* Dispone gli elementi in una riga */
+    gap: 16px; /* Spaziatura tra le card */
+    justify-content: left; /* Centra le card orizzontalmente */
+    flex-wrap: wrap; /* Permette di andare a capo se lo schermo è piccolo */
+    margin: 20px 0 30px 30px; /* Spaziatura superiore e inferiore */
+    
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Evita che le card si allarghino */
+  }
+
+  .exhibition-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .exhibition-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* Fine Card section */
+
+/*newsletter section */
+
+.newsletter {
+    background-color: #f8f9fa;
+    padding: 50px 0;   
+}
+
+.newsletter h2 {
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.newsletter input {
+    max-width: 300px;
+}
+
+.newsletter.btn-dark {
+    margin-left: 10px;
+}
+
+
+/* Fine Newsletter section */
+
+
+/* footer section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+    color: #2e6db0
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-bottom a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* Contenitore per i bottoni social */
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Distanza tra i bottoni */
+    margin-top: 15px; /* Spaziatura superiore */
+    justify-content: flex-start; /* Allinea i bottoni a sinistra */
+}
+
+/* Stile generale per i bottoni social */
+.social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Sfondo nero */
+    border-radius: 50%; /* Forma circolare */
+    width: 50px;
+    height: 50px;
+    text-decoration: none; /* Rimuove la sottolineatura */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animazioni */
+}
+
+/* Icone interne ai bottoni */
+.social-logo {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Converte l'icona in bianco */
+}
+
+/* Hover generico per i bottoni */
+.social-button:hover {
+    transform: scale(1.1); /* Effetto zoom al passaggio del mouse */
+    background-color: #444; /* Grigio scuro come feedback visivo */
+}
+
+/* Colore personalizzato al passaggio del mouse */
+.instagram-button:hover {
+    background-color: #8f00ff; /* Colore Instagram */
+}
+
+.facebook-button:hover {
+    background-color: #3b5998; /* Colore Facebook */
+}
+
+/* Responsività su mobile */
+@media (max-width: 768px) {
+    .navbar-logo {
+        max-height: 40px;
+    }
+    .social-buttons {
+        justify-content: center; /* Centra i bottoni su dispositivi più piccoli */
+    }
+    .welcome-section .btn-dark {
+        width:100%;
+    }
+
+    .newsletter input,
+    .newsletter .btn-dark {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .social-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-logo {
+        width: 20px;
+        height: 20px;
+    }
+}
