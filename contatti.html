@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Contact Concept Gallery - Get in touch with us for any inquiries about art and exhibitions">
     <title>Contacts - Concept Gallery</title>
     <link rel="stylesheet" href="styles/homepage.css"> 
     <link rel="stylesheet" href="styles/contatti.css"> 
@@ -23,7 +24,7 @@
             <div class="container-fluid">
                 <!-- Contenitore Immagine-->
                  <div class="navbar-brand">
-                     <img src="photos/logo.png" alt="Logo Concept Gallery" class="navbar-logo">
+                    <a href="index.html"> <img src="photos/logo.png" alt="Logo Concept Gallery" class="navbar-logo"></a>
                  </div>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -55,96 +56,76 @@
     <!-- Breadcrumb -->
     <nav>  
         <ul class="breadcrumb">  
-            <li><a href="index.html">Home page</a></li>  
+            <li><a href="index.html">Home</a></li>  
             <li>Contacts</li>  
         </ul>  
     </nav>
     <!--Fine Breadcrumb -->
 
     <!-- Contact Form-->
+ <section class="contact-header">
     <div class="container">
-        <div class=" text-center mt-5 ">
-
-            <h1 >Contact Us</h1>
-            <p> To contact us, please fill out the form below, or call us at <div class="number"> 123456789</div></p>
-                
-            
-        </div>
-
-    
-    <div class="row ">
-      <div class="col-lg-7 mx-auto">
-        <div class="card mt-2 mx-auto p-4 bg-light">
-            <div class="card-body bg-light">
-       
-            <div class = "container">
-                             <form id="contact-form" role="form">
-
-            
-
-            <div class="controls">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_name">Firstname *</label>
-                            <input id="form_name" type="text" name="name" class="form-control"  required="required" data-error="Firstname is required.">
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_lastname">Lastname *</label>
-                            <input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Lastname is required.">
-                                                            </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_email">Email *</label>
-                            <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
-                            
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="form_message">Message *</label>
-                            <textarea id="form_message" name="message" class="form-control"  rows="4" required="required" data-error="Please, leave us a message."></textarea
-                                >
-                            </div>
-
-                        </div>
-
-
-                    <div class="col-md-12">
-                        
-                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
-                            " value="Submit Message" >
-                    
-                </div>
-          
-                </div>
-
-
-        </div>
-         </form>
-        </div>
+        <h1>Contact Us</h1>
+        <p class="lead">We'd love to hear from you. Send us a message or reach out directly.</p>
+        
+        <!-- Container per le informazioni di contatto dirette -->
+        <div class="contact-info">
+            <!-- Numero di telefono cliccabile -->
+            <div class="contact-method">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <a href="tel:+123456789" class="number">+123 456 789</a>
             </div>
-
-
+            <!-- Email cliccabile -->
+            <div class="contact-method">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:info@conceptgallery.com" class="number">info@conceptgallery.com</a>
+            </div>
+        </div>
     </div>
-        <!-- /.8 -->
+</section>
 
+ <div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Form con struttura semantica migliorata -->
+            <form class="contact-form" id="contact-form">
+                <!-- Prima riga: Nome e Cognome -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!-- Aggiunta classe required-field per indicare campi obbligatori -->
+                            <label for="form_name" class="required-field">First Name</label>
+                            <input id="form_name" type="text" name="name" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_lastname" class="required-field">Last Name</label>
+                            <input id="form_lastname" type="text" name="surname" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="form-group">
+                    <label for="form_email" class="required-field">Email Address</label>
+                    <input id="form_email" type="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="form_message" class="required-field">Message</label>
+                    <textarea id="form_message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <!-- Pulsante di invio -->
+                <button type="submit" class="btn btn-send">Send Message</button>
+            </form>
+        </div>
     </div>
-    <!-- /.row-->
+</div>
 
-</div>
-</div>
-<!-- Fine Contact Form-->
+<!--Fine Contact Form-->
+
 <hr> 
  <!-- Inizio footer-->
  <div class="footer-content">

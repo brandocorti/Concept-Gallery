@@ -1,3 +1,39 @@
+/* intro Gallery Section */
+.gallery-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.gallery-section .col-md-6:first-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.gallery-section h2 {
+  font-weight: 700;
+  color: #000;
+  margin-bottom:15px;
+}
+
+.gallery-section p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gallery-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* fine intro Gallery Section */
+/* photos */
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -13,10 +49,11 @@
   
   .column img {
     margin-top: 12px;
-
     vertical-align: middle;
     width: 100%;
   }
+
+  /* Fine photos
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {

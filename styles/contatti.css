@@ -1,39 +1,150 @@
+/* Stili base del corpo pagina */
 body {
     font-family: 'Lato', sans-serif;
+    line-height: 1.6;
 }
 
-h1 {
-    margin-bottom: 40px;
+/* Stili header sezione contatti */
+.contact-header {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
+/* Stile titolo principale */
+.contact-header h1 {
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Container informazioni di contatto */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Stile per ogni metodo di contatto */
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Stile numeri e email cliccabili */
 .number {
-    color: green; 
-    font-size: 20px;
-    text-decoration: underline;
+    color: #28a745;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-label {
+.number:hover {
+    color: #218838;
+}
+
+/* Stili form di contatto */
+.contact-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Stili gruppi di form */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Stili label */
+.form-group label {
     color: #333;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
+/* Stili campi input e textarea */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    padding: 0.75rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+/* Stile focus campi input */
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Stile pulsante invio */
 .btn-send {
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    width: 80%;
-    margin-left: 3px;
-    margin-top: 10px;
-
+    background-color: #28a745 !important;
+    color: white !important;
+    font-weight: 500!important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease !important; ;
+    cursor: pointer;
 }
 
-.help-block.with-errors {
-    color: #ff5050;
-    margin-top: 5px;
-
+.btn-send:hover {
+    background-color: #218838 !important;
 }
 
-.card{
-	margin-left: 10px;
-	margin-right: 10px;
+/* Indicatore campi obbligatori */
+.required-field::after {
+    content: "*";
+    color: #dc3545;
+    margin-left: 4px;
 }
 
+/* Stile footer */
+.footer-content {
+    margin-top: 4rem;
+}
+
+/* Stili accessibilità */
+:focus {
+    outline: 2px solid #28a745;
+    outline-offset: 2px;
+}
+
+/* Stili per stati di errore */
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Media queries per responsiveness */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .btn-send {
+        padding: 0.75rem;
+    }
+}
