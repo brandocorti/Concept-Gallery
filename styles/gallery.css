@@ -1,7 +1,10 @@
 /* intro Gallery Section */
 .gallery-section {
   background-color: #f8f9fa;
-  padding: 50px 0;
+  padding: 60px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+
 }
 
 .gallery-section .col-md-6:first-child{
@@ -9,19 +12,31 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
+  padding: 0 30px;
 }
 
 .gallery-section h2 {
   font-weight: 700;
   color: #000;
-  margin-bottom:15px;
+  margin-bottom:20px;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.gallery-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #000;   /* Linea nera sotto il titolo */
 }
 
 .gallery-section p {
   color: #333;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0;
 }
 
@@ -29,6 +44,7 @@
   width: 100%;
   height: auto;
   display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0,1);
 }
 
 /* fine intro Gallery Section */
@@ -38,19 +54,38 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
+    margin: 20px 0;
   }
   
   /* Create four equal columns that sits next to each other */
   .column {
     flex: 25%;
     max-width: 25%;
-    padding: 4px;
+    padding: 0 8px;
   }
   
   .column img {
-    margin-top: 12px;
+    margin-top: 16px;
     vertical-align: middle;
     width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  }
+
+  .column img:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.2);  
+  }
+
+  .column img {
+    filter: grayscale(0);
+    transition: all 0.3s ease;
+  }
+
+  .column img:hover {
+    filter: grayscale(0);
+    transform: translateY(-5px);
   }
 
   /* Fine photos
@@ -61,6 +96,14 @@
       flex: 50%;
       max-width: 50%;
     }
+
+    .gallery-section {
+      padding: 40px 0;
+    }
+
+    .gallery-section h2{
+      font-size: 2rem;
+    }
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -68,5 +111,13 @@
     .column {
       flex: 100%;
       max-width: 100%;
+    }
+
+    .gallery-section {
+      padding: 0 20px;
+    }
+
+    .gallery-section h2{
+      font-size: 1.8rem;
     }
   }

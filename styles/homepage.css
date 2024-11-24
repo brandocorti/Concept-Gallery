@@ -79,6 +79,7 @@ body, html {
     max-width: 60%; /* Larghezza massima del carosello */
     margin: 0 auto; /* Centrare il carosello orizzontalmente */
     position: relative;
+    overflow: hidden;
 }
 
 /* Stile per le immagini del carosello */
@@ -86,18 +87,34 @@ body, html {
     width: 400px; /* Adattare l'immagine al contenitore del carosello */
     height: 400px;; /* Mantenere il rapporto d'aspetto originale */ 
     object-fit: cover; /* Ritagliare l'immagine per riempire lo spazio disponibile */
+    display: block;
+    margin: 0 auto;
 
+}
+
+.carousel-inner {
+    max-height: 400px;
+    background-color: #f8f9fa
 }
 
 /* Pulsanti di controllo */
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%; /* Ridurre la larghezza dei pulsanti */
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
 }
 
 /* Indicatori */
 .carousel-indicators button {
     background-color: #333; /* Colore scuro per i bottoni */
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
 }
 .carousel-indicators .active {
     background-color: #717171; /* Colore per l'indicatore attivo */
@@ -302,6 +319,18 @@ body, html {
     }
     .welcome-section .btn-dark {
         width:100%;
+    }
+    #carouselExampleIndicators {
+        max-width: 90%;
+    }
+
+    #carouselExampleIndicators .carousel-inner img{
+        width: 100%;
+        height:300px;
+    }
+
+    .carousel-inner {
+        max-height:300px;
     }
 
     .newsletter input,
