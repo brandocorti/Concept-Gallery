@@ -60,6 +60,17 @@
     </nav>
     <!-- <Fine Breadcrumb -->
 
+    <!-- Search Bar -->
+    <div class="container search-section mb-4">
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+              <!-- Barra di ricerca con stile Bootstrap -->
+              <input type="text" class="form-control" id="artistSearch" placeholder="Cerca artisti...">
+          </div>
+      </div>
+  </div>
+
+
     <!-- Meet the team-->
     <div class="row">
         <div class="column">
@@ -175,6 +186,30 @@
 
 <!-- Fine footer-->
 
+
+<!-- Funzione per la ricerca -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('artistSearch');
+    const artistCards = document.querySelectorAll('.column');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        artistCards.forEach(card => {
+            const artistName = card.querySelector('h2').textContent.toLowerCase();
+            const artistTitle = card.querySelector('.title').textContent.toLowerCase();
+            
+            if (artistName.includes(searchTerm) || artistTitle.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
 </body>
