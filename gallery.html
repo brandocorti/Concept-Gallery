@@ -86,41 +86,106 @@
 
 <div class="row">
     <div class="column">
-      <img src="photos/object1.jpg">
-      <img src="photos/object2.jpg">
-      <img src="photos/object3.jpg">
-      <img src="photos/object4.jpg">
-      <img src="photos/object5.jpg">
-      <img src="photos/object6.jpeg">
-      <img src="photos/object2.jpg">
+      <img src="photos/object1.jpg" alt="Artwork 1" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object2.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object3.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object4.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object5.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object6.jpeg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object2.jpg" class="zoomable" data-description="Opera artistica">
     </div>
     <div class="column">
-      <img src="photos/object2.jpg">
-      <img src="photos/object6.jpeg">
-      <img src="photos/object1.jpg">
-      <img src="photos/object3.jpg">
-      <img src="photos/object2.jpg">
-      <img src="photos/object4.jpg">
-      <img src="photos/object5.jpg">
+      <img src="photos/object2.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object6.jpeg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object1.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object3.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object2.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object4.jpg" class="zoomable" data-description="Opera artistica">
+      <img src="photos/object5.jpg" class="zoomable" data-description="Opera artistica">
     </div>
     <div class="column">
-        <img src="photos/object5.jpg">
-        <img src="photos/object2.jpg">
-        <img src="photos/object3.jpg">
-        <img src="photos/object4.jpg">
-        <img src="photos/object1.jpg">
-        <img src="photos/object6.jpeg">
-        <img src="photos/object2.jpg">
+        <img src="photos/object5.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object2.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object3.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object4.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object1.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object6.jpeg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object2.jpg" class="zoomable" data-description="Opera artistica">
     </div>
     <div class="column">
-        <img src="photos/object5.jpg">
-        <img src="photos/object6.jpeg">
-        <img src="photos/object1.jpg">
-        <img src="photos/object4.jpg">
-        <img src="photos/object5.jpg">
-        <img src="photos/object1.jpg">
-        <img src="photos/object3.jpg">
+        <img src="photos/object5.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object6.jpeg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object1.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object4.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object5.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object1.jpg" class="zoomable" data-description="Opera artistica">
+        <img src="photos/object3.jpg" class="zoomable" data-description="Opera artistica">
   </div>
+
+  <div id="image-modal">
+    <div>
+        <img id="zoomed-image" src="photos/object1.jpg">
+        <p id="image-description" class="image-description"></p>
+    </div>
+  </div>
+
+  <div id="image-modal">
+    <div>
+        <img id="zoomed-image" src="photos/object2.jpg">
+        <p id="image-description" class="image-description"></p>
+    </div>
+  </div>
+
+  <div id="image-modal">
+    <div>
+        <img id="zoomed-image" src="photos/object3.jpg">
+        <p id="image-description" class="image-description"></p>
+    </div>
+  </div>
+  <div id="image-modal">
+    <div>
+        <img id="zoomed-image" src="photos/object4.jpg">
+        <p id="image-description" class="image-description"></p>
+    </div>
+  </div>
+
+  <div id="image-modal">
+    <div>
+        <img id="zoomed-image" src="photos/object5.jpg">
+        <p id="image-description" class="image-description"></p>
+    </div>
+  </div>
+
+  <div id="image-modal">
+    <div>
+        <img id="zoomed-image" src="photos/object6.jpeg">
+        <p id="image-description" class="image-description"></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const zoomableImages = document.querySelectorAll('.zoomable');
+        const modal = document.getElementById('image-modal');
+        const zoomedImage = document.getElementById('zoomed-image');
+        const imageDescription = document.getElementById('image-description');
+
+        zoomableImages.forEach(image => {
+            image.addEventListener('click', function() {
+                zoomedImage.src = this.src;
+                imageDescription.textContent = this.getAttribute('data-description') || 'Nessuna descrizione disponibile';
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Chiudi il modale cliccando fuori dall'immagine
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
 
 
 <!-- Fine Photo Gallery -->
@@ -163,6 +228,9 @@
     &copy; 2024 Concept Gallery | All Rights Reserved
 </div>
 <!-- Fine footer-->
+
+
+
 
 </body>
 </html>
